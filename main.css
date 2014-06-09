@@ -74,30 +74,19 @@ h2 {
 
 #photo1 {
 	background-image: url(images/ChristinaRicci.jpg);
-	background-size: 200px 300px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 #photo2 {
 	background-image: url(images/HelenaBonhamCarter.jpg);
-	background-size: 200px 300px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 #photo3 {
 	background-image: url(images/JohnnyDepp.jpg);
-	background-size: 200px 300px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 #photo4 {
 	background-image: url(images/OrlandoBloom.jpg);
-	background-size: 200px 300px;
-	background-repeat: no-repeat;
-	background-position: center;
+	
 }
 
 .actors {
@@ -108,6 +97,9 @@ h2 {
 	padding: 3px;
 	width: 200px;
 	height: 300px;
+	background-size: 200px 300px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .actors:hover {
