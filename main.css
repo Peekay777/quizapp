@@ -72,6 +72,34 @@ h2 {
 	margin: 20px;
 }
 
+#photo1 {
+	background-image: url(images/ChristinaRicci.jpg);
+	background-size: 200px 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#photo2 {
+	background-image: url(images/HelenaBonhamCarter.jpg);
+	background-size: 200px 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#photo3 {
+	background-image: url(images/JohnnyDepp.jpg);
+	background-size: 200px 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#photo4 {
+	background-image: url(images/OrlandoBloom.jpg);
+	background-size: 200px 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .actors {
 	display: inline-block;
 	margin: 5px;
