@@ -114,26 +114,6 @@ h2 {
 
 #photo4 {
 	background-image: url(images/OrlandoBloom.jpg);
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-@media screen and (max-width: 900px) {
-	.row {
-		display: block;	
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.actors {
-		display: block;	
-	}
-=======
-=======
->>>>>>> parent of 5c74930... clean css
-	background-size: 200px 300px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 .actors {
@@ -144,10 +124,6 @@ h2 {
 	padding: 3px;
 	width: 200px;
 	height: 300px;
-<<<<<<< HEAD
->>>>>>> parent of 5c74930... clean css
-=======
->>>>>>> parent of 5c74930... clean css
 }
 
 .actors:hover {
