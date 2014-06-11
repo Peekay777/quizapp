@@ -69,13 +69,11 @@ h2 {
 	padding: 15px 5px;
 }
 
-img {
-	max-width: 100%;	
-}
 
 #answer {
 	margin: 20px;
 }
+
 
 .actors {
 	display: inline-block;
@@ -83,6 +81,40 @@ img {
 	border: 2px solid #fff;
 	border-radius: 5px;
 	padding: 3px;
+	width: 200px;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+#photo1 {
+	background-image: url(images/ChristinaRicci.jpg);
+}
+
+#photo2 {
+	background-image: url(images/HelenaBonhamCarter.jpg);
+}
+
+#photo3 {
+	background-image: url(images/JohnnyDepp.jpg);
+}
+
+#photo4 {
+	background-image: url(images/OrlandoBloom.jpg);
+}
+
+
+.actors {
+	display: inline-block;
+	margin: 5px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 3px;
+	width: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .actors:hover {
@@ -99,76 +131,53 @@ footer {
 	margin: auto;
 }
 
-@media (max-width: 935px) {
-	/*
+@media all and (max-width: 935px) and (min-width: 280px) {
 	* {
 		outline: 1px solid green;
 	}
-	*/
 	
 	#wrapper {
 		width: 100%;
-		height: 100%;
+	}
+	
+	header {
+		position: absolute;
+		width: 100%;
+	}
+	
+	section#question {
+		padding: 10px 25px;
+		position: relative;
+		top:80px
 	}
 	
 	#answer {
-		margin: 2.13%;	/*	20 / 935	*/
-		padding: 0;
+		position: relative;
+		top: 75px;
+		left: 20px;
+		height: 48%
 	}
 	
 	.actors {
-		margin: 0.55%;	/*	5 / 895	*/
-		border-width: 0.22%;	/*	2 / 895	*/
-		padding: 0.33%;	/*	3 / 895	*/
-		width: 22.34%;	/*	200 /895	*/
-	}
-	
-	footer {
-		width: 91.44%;			/*	855 / 935	*/
-	}
-}
-
-@media (max-width: 467px) {
-	/*
-	* {
-		outline: 1px solid yellow;
-	}
-	*/
-	
-	#wrapper {
-		width: 100%;
+		position: relative;
+		margin: 0.54%;	/*	5px / 935px	*/
+		border: 0.21% solid #fff;	/*	2px / 935px	*/
+		padding: 0.32%;	/*	3px / 935px	*/
+		width: 21.39%;	/*	200px / 935px	*/
 		height: 100%;
 	}
 	
-	.actors {
-		width: 44.68%;	/*	400 /895	*/
-	}
-	
 	footer {
-		width: 85%;		/*	855 / 935	*/
+		width: 91.44%;	/* 855px / 935px */
 	}
 }
 
-@media (max-width: 280px) {
-	/*
+@media all and (max-width: 280px) {
 	* {
 		outline: 1px solid red;
 	}
-	*/
 	
 	#wrapper {
-		height: 100%;
-	}
-	
-	.score {
-		display: none;	
-	}
-	
-	.actors {
-		width: 90%;
-	}
-	
-	footer {
-		width: 75%;			/*	855 / 935	*/
+		width: 280px;
 	}
 }
