@@ -1,26 +1,53 @@
 var questions = Array();
-var player = new Player();
+var player;
 
 $(document).ready(function () {
-	showGameValues();
-	showQuestion(player.answered);
+	// button to start/restart quiz
+	$(".start").click(function () {
+		$(".intro").hide();
+		$(".finish").hide();
+		$(".game").show();
+		$(".score").css('display', 'inline-block');
+		
+		player = new Player();
+		
+		showGameValues();
+		showQuestion(player.answered);
+	});
 	
-	$(".actors").click(function (){
+	// click on image
+	$(".actors").click(function () {
 		var selected = +$(this).data("image");
+		
+		// check answer
 		if (selected === questions[player.answered].correctAns) {
-			console.log("Correct");
+			$("#correct").show().delay(400).fadeOut();
 			player.score++;
 		} else {
-			console.log("Wrong");
+			$("#wrong").show().delay(400).fadeOut();
 		}
 
 		player.answered++;
-
+		
+		// check to see if last question
 		if (player.answered < questions.length) {
 			showGameValues();
 			showQuestion(player.answered);
 		} else {
-			alert("finish");
+			$(".game").hide();
+			$(".score").hide();
+			$(".finish").show();
+			showGameValues();
+			
+			var response = "";
+			if (player.score === questions.length) {
+				response = "Fantastic, you know your stuff";
+			} else if (player.score === 0) {
+				response = "You are better off guessing!?!";
+			} else {
+				response = "Well Done";
+			}
+			$("#response").text(response);
 		}
 	});
 });
@@ -38,13 +65,14 @@ function Player () {
 	this.answered = 0;
 }
 
+// update the pages with values
 function showGameValues () {
-	$("#score-value").text(player.score);
+	$(".score-value").text(player.score);
 	$("#answered").text(1 + player.answered);
-	$("#numQuestions").text(questions.length);
+	$(".numQuestions").text(questions.length);
 }
 
-
+// show question and answers
 function showQuestion (questionNumber) {
 	for (var i=0; i < questions[questionNumber].films.length; i++) {
 		$("#film" + i).text(questions[questionNumber].films[i]);
@@ -55,6 +83,8 @@ function showQuestion (questionNumber) {
 	}
 }
 
+
+//---- data ----
 questions[0] = new Question(
 	["Charlie and the Chocolate Factory", "Pirates of the Caribbean: The Curse of the Black Pearl", "Sleepy Hollow"],
 	["ChristinaRicci.jpg", "HelenaBonhamCarter.jpg", "JohnnyDepp.jpg", "OrlandoBloom.jpg"],
@@ -75,8 +105,8 @@ questions[2] = new Question(
 
 questions[3] = new Question(
 	["12 Years a Slave","Salt","Serenity"],
-	["AngelinaJolie.jpg","BradPitt.jpg","ChiwetelEjiofor.jpg","NathanFillion.jpg"],
-	2
+	["NathanFillion.jpg","BradPitt.jpg","AngelinaJolie.jpg","ChiwetelEjiofor.jpg"],
+	3
 );
 
 questions[4] = new Question(

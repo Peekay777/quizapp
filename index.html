@@ -15,20 +15,43 @@
 			<h1>IMQu</h1>
 			<div class="score">
 				<span id="score-text">Your Score: </span>
-				<span id="score-value"></span>
+				<span class="score-value"></span>
 			</div>
 		</header>
-		<section id="question">
-			<h2>Who starred in
-				<span id="film0"></span>, <span id="film1"></span></span> and <span id="film2"></span>?
+		<div class="intro">
+			<div class="greybox">
+				<h3>How to Play</h3>
+				<p>This is a quiz about movies and their stars.</p>
+				<p>You will be presented with the name of three movies and the faces of four movie stars.</p>
+				<p>The correct answer will be the star that has appeared in all three moives.</p>
+				<div class="button-holder"><button class="start">Start Quiz</button></div>
+			</div>
+		</div>
+		<section id="question" class="game">
+			<h2 class="greybox">Who starred in
+				<span id="film0"></span>, <span id="film1"></span> and <span id="film2"></span>?
 			</h2>
 		</section>
-		<div id="answer">
-			<div class="actors" data-image="0"><img  id="photo0" src="" alt=" "></div><div class="actors" data-image="1"><img id="photo1" src="" alt=" "></div><div class="actors" data-image="2"><img id="photo2" src="" alt=" "></div><div class="actors" data-image="3"><img id="photo3" src="" alt=" "></div>
+		<div class="finish">
+			<div class="greybox">
+				<h3>Finished</h3>
+				<p>You got <span class="score-value"></span> out of <span class="numQuestions"></span></p>
+				<p><span id="response"></span></p>
+				<div class="button-holder"><button class="start">Try Again</button></div>
+			</div>
 		</div>
-		<footer>
-			Question <span id="answered"></span> of <span id="numQuestions"></span>
+		<div id="answer"  class="game">
+			<div class="actors" data-image="0"><img  id="photo0" src="images/missing.jpg" alt=" "></div><div class="actors" data-image="1"><img id="photo1" src="images/missing.jpg" alt=" "></div><div class="actors" data-image="2"><img id="photo2" src="images/missing.jpg" alt=" "></div><div class="actors" data-image="3"><img id="photo3" src="images/missing.jpg" alt=" "></div>
+		</div>
+		<footer  class="game">
+			Question <span id="answered"></span> of <span class="numQuestions"></span>
 		</footer>
+	</div>
+	<div id="correct" class="box">
+		<p>Correct</p>
+	</div>
+	<div id="wrong" class="box">
+		<p>Wrong</p>
 	</div>
 </body>
 </html>
