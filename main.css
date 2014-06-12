@@ -4,6 +4,7 @@
 }
 */
 
+/* the 3 game phases; intro, game and finish */
 .intro {
 	display: block;
 }
@@ -15,23 +16,7 @@
 .finish {
 	display: none;
 }
-
-h3 {
-	font-weight: bold;
-	padding-bottom: 10px;
-}
-
-p {
-	padding-bottom: 5px;	
-}
-
-.button-holder {
-	text-align: center;
-}
-
-button {
-	width: 100px;
-}
+/* ------------------------------------------ */
 
 html,  body {
 	width: 100%;
@@ -132,6 +117,24 @@ footer {
 	margin: auto;
 }
 
+h3 {
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+p {
+	padding-bottom: 5px;	
+}
+
+.button-holder {
+	text-align: center;
+}
+
+button {
+	width: 100px;
+}
+
+/* answer response */
 .box {
 	display: none;
 	position: fixed;
